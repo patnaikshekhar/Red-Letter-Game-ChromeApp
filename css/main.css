@@ -1,0 +1,188 @@
+#gameCanvas {
+}
+
+#container {
+    width: 100%;
+}
+
+#main-menu {
+    margin-top: 5%;
+}
+
+.main-menu-children {
+    width: 100%;
+    margin-top: 4%;
+}
+
+nav:hover #close-button {
+  opacity: 1;
+}
+
+#close-button {
+  float: right;
+  padding: 0 5px 2px 5px;
+  font-weight: bold;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-in-out;
+  z-index: -1
+}
+
+#main > nav {
+  -webkit-app-region: drag;
+}
+
+#main > nav button {
+  -webkit-app-region: no-drag;
+  border-radius: 999px;
+  margin-right: 1%;
+  margin-top: 1%;
+}
+
+#gameCenter {
+  margin-left: 22%;
+  margin-right: 22%;
+}
+
+#splashScreen {
+  margin-top: 15%;
+}
+
+#big-error {
+  margin-top: 20%;
+}
+
+#settingsOK {
+  margin-left: 45%;
+}
+
+#SettingsSoundVolume .slider-handle {
+  background: red;
+}
+
+.settingsSound {
+  margin-left: 5%;
+}
+
+#submit-word-button {
+  float: left;
+}
+
+#cancel-word-button {
+  float: right;
+  margin-right: 8.1%;
+}
+
+#gameCanvasRow {
+  margin-top: 1%;
+}
+
+#word-in-progress {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  /*text-align:center;*/
+  display: inline;
+}
+
+#gameButtons {
+  text-align: center;
+  margin-top: 5%;
+}
+
+#timeAndScoreRow {
+  position: relative;
+  text-align: center;
+  height: 20pt;
+}
+
+#timeAndScoreRow .score {
+  margin-left: 10%;
+  margin-right: 15%;
+  font-size: 16pt;
+  color: #ed9c28;
+}
+
+#timeAndScoreRow .timer-normal {
+  margin-right: 7%;
+  float: right;
+  font-size: 16pt;
+  color: rgb(240, 180, 0);
+}
+
+#timeAndScoreRow .timer-animated {
+  margin-right: 7%;
+  -webkit-animation: fontFlash 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fontFlash
+{
+  from {
+    color: indianred;
+    font-size: 24pt;
+  }
+  to {
+    color: darkred;
+    font-size: 16pt;
+  }
+}
+
+#timeAndScoreRow .timer {
+  position: absolute;
+  right: 8%;
+}
+
+#playerWords {
+  position: absolute;
+  left: 1%;
+  color: rgb(36,177,220);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#mainGame {
+  position: relative;
+}
+
+#opponentWords {
+  position: absolute;
+  right: 1%;
+  color: rgb(36,177,220);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.madeWords {
+  color: rgb(28, 28, 107);
+  font-size: 0.8em;
+}
+
+.madeWordsScore {
+  padding-left: 30%;
+  color: grey;
+  font-size: 0.8em;
+  background-color: white;
+}
+
+.game-over-title {
+  color: #d9534f;
+}
+
+.end-game-message {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ed9c28;
+}
+
+#help-content {
+  height: 500px;
+  overflow: auto;
+}
+
+#help-header {
+  color: #d2322d;
+}
+
+#about-header {
+  color: #d2322d;
+}

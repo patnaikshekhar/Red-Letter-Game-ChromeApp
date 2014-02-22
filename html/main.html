@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gameApp" ng-csp>
+    <head>
+        <title>Red Letter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" type="text/css" media="all"></link>
+        <link rel="stylesheet" href="../lib/bootstrap/switch/bootstrap-switch.css" type="text/css" media="all"></link>
+        <link rel="stylesheet" href="../lib/bootstrap/slider/bootstrap-slider.css" type="text/css" media="all"></link>
+        <link rel="stylesheet" href="../lib/angular/angular-csp.css" type="text/css" media="all"></link>
+        <link rel="stylesheet" href="../css/main.css" type="text/css" media="all"></link>
+        <script src="../lib/jquery/jquery.min.js"></script>
+        <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../lib/bootstrap/switch/bootstrap-switch.js"></script>
+        <script src="../lib/bootstrap/slider/bootstrap-slider.js"></script>
+    </head>
+    <body>
+        <section id="main">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="../images/logo.gif"></img></a>
+                </div>
+                <button class="btn btn-warning" id="close-button" title="Close" click="window.close()">x</button>
+            </nav>
+            <div class="container">
+                <div ng-view=""></div>
+            </div>
+        </section>
+
+        <!-- Load Angular and Modules -->
+        <script src="../lib/angular/angular.min.js"></script>
+        <script src="../lib/angular/angular-route.min.js"></script>
+        <script src="../lib/angular/angular-animate.min.js"></script>
+
+        <!-- Load Main Application Module -->
+        <script src="../js/app.js"></script>
+
+        <!-- Load Factories -->
+        <script src="../js/factories/constFactory.js"></script>
+        <script src="../js/factories/settingsFactory.js"></script>
+        <script src="../js/factories/gameFactory.js"></script>
+
+        <!-- Load Controllers -->
+        <script src="../js/controllers/GameController.js"></script>
+        <script src="../js/controllers/HelpController.js"></script>
+        <script src="../js/controllers/MenuController.js"></script>
+        <script src="../js/controllers/SplashController.js"></script>
+        <script src="../js/controllers/ErrorController.js"></script>
+        <script src="../js/controllers/SettingsController.js"></script>
+    </body>
+</html>

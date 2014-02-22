@@ -1,0 +1,71 @@
+<div id="mainGame" ng-show="gameStarted">
+    <div id="playerWords" ng-if="playerWords.length">
+        <p>{{ playerName }}</p>
+        <table>
+            <tr ng-repeat="word in playerWords | orderBy:'score':true">
+                <td class="madeWords">{{ word.word }}</td>
+                <td class="madeWordsScore">{{ word.score }}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="opponentWords" ng-if="opponentWords.length">
+        <p>{{ opponentName }} ({{ opponentScore }})</p>
+        <table>
+            <tr ng-repeat="word in opponentWords | orderBy:'score':true">
+                <td class="madeWords">{{ word.word }}</td>
+                <td class="madeWordsScore">{{ word.score }}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="gameCenter">
+        <div id="timeAndScoreRow" class="row">
+            <strong class="score">{{ score }}</strong>
+            <span class="timer"><strong class="{{ timerClass }}">{{ time }}</strong></span>
+        </div>
+
+        <div id="gameButtons" class="row">
+            <button class="btn btn-warning" id="submit-word-button" ng-click="submit()">Submit</button>
+
+            <h4 id="word-in-progress">{{ word }}</h4>
+
+            <button class="btn btn-danger" id="cancel-word-button" ng-click="cancel()">Cancel</button>
+        </div>
+        <div class="row">
+            <div id="gameCanvasRow">
+                <canvas id="gameCanvas" width="400" height="400" ng-mousemove="mouseMove($event)" ng-click="mouseClick($event)"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="endGameDialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title game-over-title">Game Over</h4>
+      </div>
+      <div class="modal-body">
+        <p ng-hide="endGameMessage">Waiting for results..</p>
+        <p ng-show="endGameMessage" class="end-game-message">{{ endGameMessage }}</p>
+        <p ng-show="endGameMessage">You scored {{ score }}. <span ng-show="opponentWords.length">Your opponent scored {{ opponentScore }}</span></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" data-dismiss="modal" ng-click="backToMenu()">Back To Menu</button>
+        <button class="btn btn-warning" ng-click="playAgain()">Play Again</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="waitingDialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title game-over-title">Waiting..</h4>
+      </div>
+      <div class="modal-body">
+        <p>Waiting for another player to join...</p>
+      </div>
+    </div>
+  </div>
+</div>
